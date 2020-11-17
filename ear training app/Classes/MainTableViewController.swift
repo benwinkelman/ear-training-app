@@ -9,17 +9,14 @@ import UIKit
 import AVFoundation
 
 class MainTableViewController: UITableViewController {
-    var intervals = [String]()
     
-    var mp3 = String()
-
+    private let intervals = ["second", "third", "fourth", "fifth", "sixth", "seventh"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Interval training"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        intervals += ["second", "third", "fourth", "fifth", "sixth", "seventh"]
         
     }
     
@@ -32,7 +29,7 @@ class MainTableViewController: UITableViewController {
         cell.textLabel?.text = intervals[indexPath.row]
         return cell
     }
-            
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedInterval = intervals[indexPath.row]

@@ -9,10 +9,12 @@ import UIKit
 import AVFoundation
 
 class DetailViewController: UIViewController {
-    var audioPlayer = AVAudioPlayer()
+    
     var selectedInterval : String?
-    var intervalNumber = 0
-    var correctAnswer = 0
+
+    private var audioPlayer = AVAudioPlayer()
+    private var intervalNumber = 0
+    private var correctAnswer = 0
 
     // odd numbered intervals are minor (or perfect for 4th and 5th), even are major (or augmented for 4th and 5th) - only problem is would like to include diminshed fifth as well.
     

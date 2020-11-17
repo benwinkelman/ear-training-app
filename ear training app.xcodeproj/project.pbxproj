@@ -93,8 +93,8 @@
 			children = (
 				B5AA1B31256205CA00BDD8EE /* AppDelegate.swift */,
 				B5AA1B4925620C6E00BDD8EE /* DetailViewController.swift */,
-				B5AA1B33256205CA00BDD8EE /* SceneDelegate.swift */,
 				B5AA1B35256205CA00BDD8EE /* MainTableViewController.swift */,
+				B5AA1B33256205CA00BDD8EE /* SceneDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
