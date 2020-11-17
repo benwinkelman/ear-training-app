@@ -21,11 +21,6 @@ class ViewController: UITableViewController {
         
         intervals += ["second", "third", "fourth", "fifth", "sixth", "seventh"]
         
-//        cellTapSound = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"cellTapSound" withExtension:@"mp3"] error:nil];
-
-//        [cellTapSound prepareToPlay];
-    
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
