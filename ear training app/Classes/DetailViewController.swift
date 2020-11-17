@@ -10,12 +10,13 @@ import AVFoundation
 
 class DetailViewController: UIViewController {
     
-    var selectedInterval : String?
-
+    var selectedInterval = "second"
+    
     private var audioPlayer = AVAudioPlayer()
     private var intervalNumber = 0
     private var correctAnswer = 0
-
+    private var numberOfIntervals = 0
+    
     @IBOutlet var firstAnswerButton: UIButton!
     @IBOutlet var secondAnswerButton: UIButton!
     @IBOutlet var thirdAnswerButton: UIButton!
@@ -26,17 +27,20 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = selectedInterval ?? "Choose an interval"
+        title = selectedInterval
         navigationController?.navigationBar.prefersLargeTitles = true
         
         thirdAnswerButton.isHidden = true
         answerButtonsStackView.axis = .horizontal
+        numberOfIntervals = 2
+
         switch selectedInterval {
-        
+        case "second":
+            numberOfIntervals = 6
         case "fourth":
             firstAnswerButton.setTitle("perfect", for: .normal)
             secondAnswerButton.setTitle("augmented", for: .normal)
-
+            
         case "fifth":
             firstAnswerButton.setTitle("diminished", for: .normal)
             secondAnswerButton.setTitle("perfect", for: .normal)
@@ -48,11 +52,12 @@ class DetailViewController: UIViewController {
             break
         }
     }
-
+    
     @IBAction func playButton(_ sender: UIButton) {
-        intervalNumber = Int.random(in: 1...2)
-      
-        let sound = Bundle.main.path(forResource: "\(selectedInterval ?? "second")\(intervalNumber)", ofType: "mp3")
+        intervalNumber = Int.random(in: 1...numberOfIntervals)
+        print("Interval number \(intervalNumber)")
+        
+        let sound = Bundle.main.path(forResource: "\(selectedInterval)\(intervalNumber)", ofType: "mp3")
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
@@ -64,15 +69,9 @@ class DetailViewController: UIViewController {
         audioPlayer.play()
     }
     
-        
-//        let ac = UIAlertController(title: title, message: "Major or minor?", preferredStyle: .alert)
-//        present(ac, animated: true)
-    
-    
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
-
-        if sender.tag == intervalNumber {
+        if sender.tag == (intervalNumber - 1) % 2 {
             title = "Correct"
         } else {
             title = "Wrong"
@@ -80,6 +79,6 @@ class DetailViewController: UIViewController {
         let ac = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
         present(ac, animated: true)
-    
-  }
+        
+    }
 }
