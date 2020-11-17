@@ -23,6 +23,22 @@
                                     <action selector="playButton:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="nD4-rh-1eQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-eS-Kds">
+                                <rect key="frame" x="282" y="365" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Major"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="C3C-MH-BEJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-oX-naA">
+                                <rect key="frame" x="84" y="365" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Minor"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="4Wn-6o-37w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hl1-9y-fc2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
