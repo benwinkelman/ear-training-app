@@ -68,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5683857825647909004491E1 /* Intervals */ = {
+			isa = PBXGroup;
+			children = (
+				B5AA1B7A2562F26900BDD8EE /* dimFifth1.mp3 */,
+				B5AA1B7B2562F26900BDD8EE /* fifth1.mp3 */,
+				B5AA1B782562F26900BDD8EE /* fifth2.mp3 */,
+				B5AA1B762562F26900BDD8EE /* fourth1.mp3 */,
+				B5AA1B7C2562F26900BDD8EE /* fourth2.mp3 */,
+				B5AA1B732562F26800BDD8EE /* second1.mp3 */,
+				B5AA1B792562F26900BDD8EE /* second2.mp3 */,
+				B5AA1B752562F26800BDD8EE /* seventh1.mp3 */,
+				B5AA1B7F2562F26A00BDD8EE /* seventh2.mp3 */,
+				B5AA1B7D2562F26900BDD8EE /* sixth1.mp3 */,
+				B5AA1B742562F26800BDD8EE /* sixth2.mp3 */,
+				B5AA1B772562F26900BDD8EE /* third1.mp3 */,
+				B5AA1B7E2562F26A00BDD8EE /* third2.mp3 */,
+			);
+			path = Intervals;
+			sourceTree = "<group>";
+		};
 		B5AA1B25256205CA00BDD8EE = {
 			isa = PBXGroup;
 			children = (
@@ -89,26 +109,14 @@
 			isa = PBXGroup;
 			children = (
 				B5AA1B31256205CA00BDD8EE /* AppDelegate.swift */,
+				B5AA1B3A256205CA00BDD8EE /* Assets.xcassets */,
+				B5AA1B4925620C6E00BDD8EE /* DetailViewController.swift */,
+				5683857825647909004491E1 /* Intervals */,
+				B5AA1B3F256205CA00BDD8EE /* Info.plist */,
+				B5AA1B3C256205CA00BDD8EE /* LaunchScreen.storyboard */,
+				B5AA1B37256205CA00BDD8EE /* Main.storyboard */,
 				B5AA1B33256205CA00BDD8EE /* SceneDelegate.swift */,
 				B5AA1B35256205CA00BDD8EE /* ViewController.swift */,
-				B5AA1B37256205CA00BDD8EE /* Main.storyboard */,
-				B5AA1B4925620C6E00BDD8EE /* DetailViewController.swift */,
-				B5AA1B3A256205CA00BDD8EE /* Assets.xcassets */,
-				B5AA1B3C256205CA00BDD8EE /* LaunchScreen.storyboard */,
-				B5AA1B3F256205CA00BDD8EE /* Info.plist */,
-				B5AA1B782562F26900BDD8EE /* fifth2.mp3 */,
-				B5AA1B7C2562F26900BDD8EE /* fourth2.mp3 */,
-				B5AA1B7A2562F26900BDD8EE /* dimFifth1.mp3 */,
-				B5AA1B792562F26900BDD8EE /* second2.mp3 */,
-				B5AA1B7F2562F26A00BDD8EE /* seventh2.mp3 */,
-				B5AA1B742562F26800BDD8EE /* sixth2.mp3 */,
-				B5AA1B7E2562F26A00BDD8EE /* third2.mp3 */,
-				B5AA1B732562F26800BDD8EE /* second1.mp3 */,
-				B5AA1B752562F26800BDD8EE /* seventh1.mp3 */,
-				B5AA1B7D2562F26900BDD8EE /* sixth1.mp3 */,
-				B5AA1B772562F26900BDD8EE /* third1.mp3 */,
-				B5AA1B762562F26900BDD8EE /* fourth1.mp3 */,
-				B5AA1B7B2562F26900BDD8EE /* fifth1.mp3 */,
 			);
 			path = "ear training app";
 			sourceTree = "<group>";
