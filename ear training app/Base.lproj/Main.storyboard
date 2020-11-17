@@ -16,52 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-fd-KkO">
-                                <rect key="frame" x="178.5" y="138" width="57.5" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Play" image="play" catalog="system">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="playButton:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="nD4-rh-1eQ"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-M9-ei0">
-                                <rect key="frame" x="137" y="430" width="140" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="e6l-TY-Gbx">
+                                <rect key="frame" x="86" y="391" width="242" height="114"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-oX-naA">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Minor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-fd-KkO">
+                                        <rect key="frame" x="92.5" y="0.0" width="57.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Play" image="play" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="4Wn-6o-37w"/>
+                                            <action selector="playButton:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="nD4-rh-1eQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-eS-Kds">
-                                        <rect key="frame" x="90" y="0.0" width="50" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Major"/>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="C3C-MH-BEJ"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-M9-ei0">
+                                        <rect key="frame" x="0.0" y="78" width="242" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-oX-naA">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Minor"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="4Wn-6o-37w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-eS-Kds">
+                                                <rect key="frame" x="70" y="0.0" width="50" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Major"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="C3C-MH-BEJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eal-AY-LAc" userLabel="Third Answer Button">
+                                                <rect key="frame" x="140" y="0.0" width="102" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Augmented"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="jq9-s5-Vpy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hl1-9y-fc2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bxA-M9-ei0" firstAttribute="centerX" secondItem="gHJ-gs-qb1" secondAttribute="centerX" id="E5J-HU-Jgc"/>
-                            <constraint firstItem="wFO-fd-KkO" firstAttribute="centerX" secondItem="gHJ-gs-qb1" secondAttribute="centerX" id="ZzF-Bh-ENJ"/>
-                            <constraint firstItem="wFO-fd-KkO" firstAttribute="centerX" secondItem="Hl1-9y-fc2" secondAttribute="centerX" id="uQM-P6-L06"/>
-                            <constraint firstItem="wFO-fd-KkO" firstAttribute="top" secondItem="Hl1-9y-fc2" secondAttribute="top" constant="50" id="uWt-Eo-ylS"/>
-                            <constraint firstItem="bxA-M9-ei0" firstAttribute="centerY" secondItem="gHJ-gs-qb1" secondAttribute="centerY" id="xxl-6l-wWT"/>
+                            <constraint firstItem="e6l-TY-Gbx" firstAttribute="centerY" secondItem="gHJ-gs-qb1" secondAttribute="centerY" id="fXR-eE-QJP"/>
+                            <constraint firstItem="e6l-TY-Gbx" firstAttribute="centerX" secondItem="gHJ-gs-qb1" secondAttribute="centerX" id="oR8-Uh-wDH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lj0-TQ-3U6"/>
                     <connections>
+                        <outlet property="answerButtonsStackView" destination="bxA-M9-ei0" id="cIG-T4-XRZ"/>
                         <outlet property="firstAnswerButton" destination="Z5h-oX-naA" id="8sf-3q-GUV"/>
                         <outlet property="secondAnswerButton" destination="c4a-eS-Kds" id="eJV-qb-thr"/>
+                        <outlet property="thirdAnswerButton" destination="Eal-AY-LAc" id="P8K-AB-IJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulu-tB-iw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -77,12 +89,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="interval" id="oN7-gC-Z3E">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="interval" textLabel="c2m-ll-RvY" detailTextLabel="hsR-Xu-ylk" style="IBUITableViewCellStyleValue1" id="oN7-gC-Z3E">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oN7-gC-Z3E" id="xKK-gX-cvC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2m-ll-RvY">
+                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hsR-Xu-ylk">
+                                            <rect key="frame" x="331" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -149,6 +177,9 @@
         <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
