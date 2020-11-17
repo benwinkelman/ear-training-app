@@ -88,6 +88,17 @@
 			path = Intervals;
 			sourceTree = "<group>";
 		};
+		5683857A2564798F004491E1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B5AA1B31256205CA00BDD8EE /* AppDelegate.swift */,
+				B5AA1B4925620C6E00BDD8EE /* DetailViewController.swift */,
+				B5AA1B33256205CA00BDD8EE /* SceneDelegate.swift */,
+				B5AA1B35256205CA00BDD8EE /* ViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		B5AA1B25256205CA00BDD8EE = {
 			isa = PBXGroup;
 			children = (
@@ -108,15 +119,12 @@
 		B5AA1B30256205CA00BDD8EE /* ear training app */ = {
 			isa = PBXGroup;
 			children = (
-				B5AA1B31256205CA00BDD8EE /* AppDelegate.swift */,
+				5683857A2564798F004491E1 /* Classes */,
 				B5AA1B3A256205CA00BDD8EE /* Assets.xcassets */,
-				B5AA1B4925620C6E00BDD8EE /* DetailViewController.swift */,
 				5683857825647909004491E1 /* Intervals */,
 				B5AA1B3F256205CA00BDD8EE /* Info.plist */,
 				B5AA1B3C256205CA00BDD8EE /* LaunchScreen.storyboard */,
 				B5AA1B37256205CA00BDD8EE /* Main.storyboard */,
-				B5AA1B33256205CA00BDD8EE /* SceneDelegate.swift */,
-				B5AA1B35256205CA00BDD8EE /* ViewController.swift */,
 			);
 			path = "ear training app";
 			sourceTree = "<group>";
