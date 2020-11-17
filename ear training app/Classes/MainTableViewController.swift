@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UITableViewController {
+class MainTableViewController: UITableViewController {
     var intervals = [String]()
     
     var mp3 = String()
