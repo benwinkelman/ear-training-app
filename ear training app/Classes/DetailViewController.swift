@@ -16,6 +16,9 @@ class DetailViewController: UIViewController {
     private var intervalNumber = 0
     private var correctAnswer = 0
 
+    @IBOutlet var firstAnswerButton: UIButton!
+    @IBOutlet var secondAnswerButton: UIButton!
+    
     // odd numbered intervals are minor (or perfect for 4th and 5th), even are major (or augmented for 4th and 5th) - only problem is would like to include diminshed fifth as well.
     
     override func viewDidLoad() {
@@ -23,6 +26,11 @@ class DetailViewController: UIViewController {
         
         title = selectedInterval ?? "Choose an interval"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        if selectedInterval == "fourth" {
+            firstAnswerButton.setTitle("perfect", for: .normal)
+            secondAnswerButton.setTitle("augmented", for: .normal)
+        }
     }
 
     @IBAction func playButton(_ sender: UIButton) {
