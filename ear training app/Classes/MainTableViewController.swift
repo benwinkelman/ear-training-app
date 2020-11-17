@@ -27,6 +27,7 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "interval", for: indexPath)
         cell.textLabel?.text = intervals[indexPath.row]
+        cell.detailTextLabel?.text = "0"
         return cell
     }
     
