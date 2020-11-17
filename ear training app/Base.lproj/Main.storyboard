@@ -15,8 +15,21 @@
                     <view key="view" contentMode="scaleToFill" id="gHJ-gs-qb1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-fd-KkO">
+                                <rect key="frame" x="199" y="189" width="70" height="22"/>
+                                <state key="normal" title="Button" image="play" catalog="system"/>
+                                <connections>
+                                    <action selector="playButton:" destination="rQ6-aK-ZVx" eventType="touchUpInside" id="nD4-rh-1eQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Hl1-9y-fc2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wFO-fd-KkO" firstAttribute="centerX" secondItem="Hl1-9y-fc2" secondAttribute="centerX" id="uQM-P6-L06"/>
+                            <constraint firstItem="wFO-fd-KkO" firstAttribute="top" secondItem="Hl1-9y-fc2" secondAttribute="top" constant="12" id="uWt-Eo-ylS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lj0-TQ-3U6"/>
                 </viewController>
@@ -102,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

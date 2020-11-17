@@ -6,29 +6,34 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailViewController: UIViewController {
+    var audioPlayer = AVAudioPlayer()
     var selectedInterval : String?
-    var selectedIntervalNumber = 0
-        
+    
+
+    // odd numbered intervals are minor (or perfect for 4th and 5th), even are major (or augmented for 4th and 5th) - only problem is would like to include diminshed fifth as well.
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Interval: ."
-        navigationItem.largeTitleDisplayMode = .never
+        title = selectedInterval ?? "Choose an interval"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
+    @IBAction func playButton(_ sender: UIButton) {
+        let intervalNumber = Int.random(in: 1...2)
+        let sound = Bundle.main.path(forResource: "\(selectedInterval ?? "second")\(intervalNumber)", ofType: "mp3")
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        
+        catch {
+            print(error)
+        }
+        audioPlayer.play()
     
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
