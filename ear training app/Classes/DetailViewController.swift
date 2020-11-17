@@ -18,6 +18,8 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var firstAnswerButton: UIButton!
     @IBOutlet var secondAnswerButton: UIButton!
+    @IBOutlet var thirdAnswerButton: UIButton!
+    @IBOutlet var answerButtonsStackView: UIStackView!
     
     // odd numbered intervals are minor (or perfect for 4th and 5th), even are major (or augmented for 4th and 5th) - only problem is would like to include diminshed fifth as well.
     
@@ -27,9 +29,23 @@ class DetailViewController: UIViewController {
         title = selectedInterval ?? "Choose an interval"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        if selectedInterval == "fourth" {
+        thirdAnswerButton.isHidden = true
+        answerButtonsStackView.axis = .horizontal
+        switch selectedInterval {
+        
+        case "fourth":
             firstAnswerButton.setTitle("perfect", for: .normal)
             secondAnswerButton.setTitle("augmented", for: .normal)
+
+        case "fifth":
+            firstAnswerButton.setTitle("diminished", for: .normal)
+            secondAnswerButton.setTitle("perfect", for: .normal)
+            thirdAnswerButton.setTitle("augmented", for: .normal)
+            thirdAnswerButton.isHidden = false
+            answerButtonsStackView.axis = .vertical
+            
+        default:
+            break
         }
     }
 
