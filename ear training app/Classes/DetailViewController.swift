@@ -11,6 +11,7 @@ import AVFoundation
 class DetailViewController: UIViewController {
     
     var selectedInterval = "second"
+    var selectedIntervalIndexNumber = 1
     
     private var audioPlayer = AVAudioPlayer()
     private var intervalNumber = 0
@@ -22,6 +23,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var secondAnswerButton: UIButton!
     @IBOutlet var thirdAnswerButton: UIButton!
     @IBOutlet var answerButtonsStackView: UIStackView!
+    
+
     
     // odd numbered intervals are minor (or perfect for 4th and 5th), even are major (or augmented for 4th and 5th), except for 5ths (1 for dim, 2, for perfect, 3 for aug, add 3 as you go up)
     
@@ -77,10 +80,12 @@ class DetailViewController: UIViewController {
         var title: String
         if sender.tag == (intervalNumber - 1) % numberOfIntervalTypes {
             title = "Correct"
+            intervalScores[selectedIntervalIndexNumber] += 1
         } else {
             title = "Wrong"
+            intervalScores[selectedIntervalIndexNumber] -= 1
         }
-        let ac = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: title, message: "Your score for \(selectedInterval)s is \(intervalScores[selectedIntervalIndexNumber])" , preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
         present(ac, animated: true)
         

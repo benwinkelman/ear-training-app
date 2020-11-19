@@ -8,10 +8,20 @@
 import UIKit
 import AVFoundation
 
+var secondScore = 0
+var thirdScore = 0
+var fourthScore = 0
+var fifthScore = 0
+var sixthScore = 0
+var seventhScore = 0
+
+var intervalScores = [secondScore, thirdScore, fourthScore, fifthScore, sixthScore, seventhScore]
+
 class MainTableViewController: UITableViewController {
     
     private let intervals = ["second", "third", "fourth", "fifth", "sixth", "seventh"]
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +37,9 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "interval", for: indexPath)
         cell.textLabel?.text = intervals[indexPath.row]
-        cell.detailTextLabel?.text = "0" // Show high score for intervals[indexPath.row] saved in NSUserDefaults
+        cell.detailTextLabel?.text = String(intervalScores[indexPath.row])
+        // Show high score for intervals[indexPath.row] saved in NSUserDefaults
+        print ("Interval score " + String(intervalScores[indexPath.row]))
         return cell
     }
     
@@ -35,6 +47,7 @@ class MainTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedInterval = intervals[indexPath.row]
+            vc.selectedIntervalIndexNumber = indexPath.row
             navigationController?.pushViewController(vc, animated: true)
         }
     }
